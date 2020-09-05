@@ -1,0 +1,39 @@
+package com.example.helloworld;
+
+import android.widget.EditText;
+import android.widget.TextView;
+import androidx.appcompat.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+
+    }
+
+    public void onBtnClick(View view)  {
+        TextView txtHello = findViewById(R.id.txtMessage);
+        EditText edtTxtName = findViewById(R.id.edtTxtFirstName);
+
+
+        txtHello.setText("Hello " + edtTxtName.getText().toString());
+
+
+        TextView txtFirstName = findViewById(R.id.txtFirstName);
+        EditText edtTxtFirstName = findViewById(R.id.edtTxtFirstName);
+        txtFirstName.setText("First Name: " + edtTxtFirstName.getText().toString());
+
+        TextView txtLastName = findViewById(R.id.txtLastName);
+        EditText edtTxtLastName = findViewById(R.id.edtTxtLastName);
+        txtLastName.setText("Last Name: " + edtTxtLastName.getText().toString());
+
+        TextView txtEmail = findViewById(R.id.txtEmail);
+        EditText edtTxtEmail = findViewById(R.id.edtTxtEmail);
+        txtEmail.setText("Email: " + edtTxtEmail.getText().toString());
+    }
+} 
